@@ -1,0 +1,25 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Loding_dialog样式Start -->
+    <style name="Dialog_bocop">
+        <item name="android:windowBackground">@color/bocop_dialog_bg</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+    <!-- Loding_dialog样式End -->
+
+    <style name="DesignTabLayout" parent="Widget.Design.TabLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="tabIndicatorColor">@android:color/transparent</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+
+</resources>

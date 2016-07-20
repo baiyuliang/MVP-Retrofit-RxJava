@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#FF0000</color>
+    <color name="colorPrimary">#FF0000</color>
+    <color name="colorAccent">#FF0000</color>
+
+
+    <color name="common_title_bg">#FF0000</color>
+    <color name="common_title_bg_press">#F00000</color>
+    <color name="status_bar">#000000</color>
+    <color name="common_ui_bg">#F0F0F0</color>
+
+
+    <color name="tab_text">#A2A2A2</color>
+    <color name="tab_text_press">#2D6EFA</color>
+
+    <drawable name="text_press">#999999</drawable>
+    <drawable name="image_press">#50000000</drawable>
+    <color name="white">#FFFFFF</color>
+    <color name="gray_e">#EEEEEE</color>
+    <color name="gray_c">#cccccc</color>
+    <color name="gray_9">#999999</color>
+
+    <color name="bocop_dialog_bg">#30000000</color>
+</resources>
