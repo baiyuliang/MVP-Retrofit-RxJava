@@ -1,17 +1,9 @@
 # MVP-Retrofit-RxJava
 Android MVP+Retrofit+RxJava项目实践
 
-1.登录
+1.登录          2.首页          3.图片
 
-![登录](http://img.blog.csdn.net/20160720171017747)
-
-2.首页
-
-![首页](http://img.blog.csdn.net/20160720171056528)
-
-3.图片
-
-![图片](http://img.blog.csdn.net/20160720171615828)
+![登录](http://img.blog.csdn.net/20160720171017747)![首页](http://img.blog.csdn.net/20160720171056528)![图片](http://img.blog.csdn.net/20160720171615828)
 
 整个项目使用MVP架构，导航栏使用TabLayout+ViewPager+Fragment，网络请求部分则使用目前流行的Retrofit+RxJava！
 
