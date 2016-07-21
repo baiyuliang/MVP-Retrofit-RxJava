@@ -149,4 +149,5 @@ public class ApiUtil {
 }
 ```
 
-已知bug：因RecycleView没有类似ScrollView的滑动监听，因此测量RecycleView滑动距离时，在item数量变化情况下会影响测量结果，导致首页标题栏跟随手指滑动透明效果出现问题，目前暂无解决办法。。。
+已知bug：
+首页使用RecyclerView+Header的模式，整体为一个RecyclerView，因RecycleView没有类似ScrollView的滑动监听，因此测量RecycleView滑动距离时，在item数量变化情况下会影响测量结果，导致首页标题栏跟随手指滑动透明效果出现问题，目前暂无解决办法。。。
