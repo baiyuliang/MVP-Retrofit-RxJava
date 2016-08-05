@@ -149,5 +149,10 @@ public class ApiUtil {
 }
 ```
 
-已知bug：
+#### 已知bug：
+
 首页使用RecyclerView+Header的模式，整体为一个RecyclerView，因RecycleView没有类似ScrollView的滑动监听，因此测量RecycleView滑动距离时，在item数量变化情况下会影响测量结果，导致首页标题栏跟随手指滑动透明效果出现问题，目前暂无解决办法。。。
+
+RecyclerView+Header模式适合简单的首页布局，若UI较复杂，则可更换为ScrollView嵌套RecyclerView或ScrollView+linearLayout.addView()的方式，只不过会多增加一些代码量以及处理逻辑！
+
+
