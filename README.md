@@ -7,7 +7,8 @@ Android MVP+Retrofit+RxJava项目实践
 
 整个项目使用MVP架构，导航栏使用TabLayout+ViewPager+Fragment，网络请求部分则使用目前流行的Retrofit+RxJava！
 
-下拉刷新使用 PullRecylerView：https://github.com/baiyuliang/PullRecyclerView（CSDN：http://blog.csdn.net/baiyuliang2013/article/details/51516727）
+下拉刷新： PullRecylerView：https://github.com/baiyuliang/PullRecyclerView
+CSDN：http://blog.csdn.net/baiyuliang2013/article/details/51516727
 
 部分代码：
 
