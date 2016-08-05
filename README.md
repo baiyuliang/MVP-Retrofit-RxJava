@@ -7,9 +7,7 @@ Android MVP+Retrofit+RxJava项目实践
 
 整个项目使用MVP架构，导航栏使用TabLayout+ViewPager+Fragment，网络请求部分则使用目前流行的Retrofit+RxJava！
 
-下拉刷新使用 PullRecylerView：https://github.com/baiyuliang/PullRecyclerView
-
-（CSDN：http://blog.csdn.net/baiyuliang2013/article/details/51516727）
+下拉刷新使用 PullRecylerView：https://github.com/baiyuliang/PullRecyclerView（CSDN：http://blog.csdn.net/baiyuliang2013/article/details/51516727）
 
 部分代码：
 
@@ -45,66 +43,7 @@ LoginActivity：
         Toast.makeText(LoginActivity.this, message, Toast.LENGTH_SHORT).show();
     }
 ```
-LoginPresenter：
 
-```
-/**
- * Created by baiyuliang on 2016-7-14.
- */
-public class LoginPresenter extends BasePresenter<LoginMvpView> {
-
-    Subscription mSubscription;
-
-    public LoginPresenter(Context context) {
-        this.context = context;
-    }
-
-    @Override
-    public void attachView(LoginMvpView mvpView) {
-        super.attachView(mvpView);
-    }
-
-    @Override
-    public void detachView() {
-        super.detachView();
-        if (mSubscription != null) mSubscription.unsubscribe();
-    }
-
-    public void login(String account) {
-        checkViewAttached();
-        showProgressDialog();
-        mSubscription = getApiService().login(account)
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribeOn(Schedulers.io())
-                .subscribe(new Subscriber<LoginBean>() {
-                    @Override
-                    public void onCompleted() {
-
-                    }
-
-                    @Override
-                    public void onError(Throwable e) {
-                        dissmissProgressDialog();
-                        getMvpView().loginFail("登录失败");
-                    }
-
-                    @Override
-                    public void onNext(LoginBean loginBean) {
-                        dissmissProgressDialog();
-                        if (!loginBean.getShowapi_res_code().equals("0")
-                                || loginBean.getShowapi_res_body() == null
-                                || TextUtils.isEmpty(loginBean.getShowapi_res_body().getRet_code())
-                                || !loginBean.getShowapi_res_body().getRet_code().equals("0")) {
-                            getMvpView().loginFail("请检查您输入的手机号码是否正确");
-                        } else {
-                            getMvpView().loginSuccess(loginBean);
-                        }
-                    }
-                });
-    }
-
-}
-```
 网络请求核心代码：
 ApiUtil：
 
