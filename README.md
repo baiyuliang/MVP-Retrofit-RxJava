@@ -1,4 +1,4 @@
-# MVP-Retrofit-RxJava
+# MVP-Retrofit-RxJava（项目年久失修，不再建议使用）
 Android MVP+Retrofit+RxJava项目实践
 
 1.登录          2.首页          3.图片
